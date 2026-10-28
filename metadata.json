@@ -1,0 +1,6 @@
+{
+  "name": "Deutsch House - Nemis va Ingliz tili o'quv markazi",
+  "description": "Deutsch House - Termiz shahridagi xususiy nemis va ingliz tili o'quv markazi. Kichik guruhlar, malakali ustozlar, individual yondashuv.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
