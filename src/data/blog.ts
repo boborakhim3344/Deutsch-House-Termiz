@@ -1,4 +1,5 @@
 import { BlogPost } from '../types';
+import { getAssetUrl } from '../utils/assets';
 
 export const blogPosts: BlogPost[] = [
   {
@@ -48,7 +49,7 @@ Step two: Always memorize nouns accompanied by their definite articles and plura
 Step three: Practice active speaking daily. In Deutsch House, students start conversing from week one. Because our cohorts never exceed 8 learners, every single attendee receives continuous speaking time and immediate supportive feedback.`
     },
     date: '2026-10-20',
-    image: '/assets/aistudio/Screenshot_2026-10-26-22-13-42-017_com.instagram.android-edit_52c4bdf6.jpg'
+    image: getAssetUrl('/assets/aistudio/Screenshot_2026-10-26-22-13-42-017_com.instagram.android-edit_52c4bdf6.jpg')
   },
   {
     id: 'ielts-6-5-tayyorgarlik-maslahatlari',
@@ -103,7 +104,7 @@ Writing Section: Structure Task 2 into four concise paragraphs. Cohesive academi
 Speaking Section: Sound authentic rather than rehearsed. Expand every answer using the formula: Direct response, rationale, and a concrete personal illustration. Our instructor Muhriddinjon provides targeted one-on-one evaluations to elevate each student’s communicative confidence.`
     },
     date: '2026-10-15',
-    image: '/assets/aistudio/Screenshot_2026-10-26-22-14-39-647_com.instagram.android-edit_654ff189.jpg'
+    image: getAssetUrl('/assets/aistudio/Screenshot_2026-10-26-22-14-39-647_com.instagram.android-edit_654ff189.jpg')
   },
   {
     id: 'germaniyada-oqish-va-ishlash-til-darajasi',
@@ -167,6 +168,6 @@ The modern German points-based immigration system grants strong points for Germa
 At Deutsch House, our mentors guide students not merely through grammar textbooks, but toward concrete visa readiness and long-term career success.`
     },
     date: '2026-10-10',
-    image: '/assets/aistudio/Screenshot_2026-10-26-22-11-59-699_com.instagram.android-edit_5e2b32ea.jpg'
+    image: getAssetUrl('/assets/aistudio/Screenshot_2026-10-26-22-11-59-699_com.instagram.android-edit_5e2b32ea.jpg')
   }
 ];

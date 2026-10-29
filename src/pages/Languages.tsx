@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
+import { getAssetUrl } from '../utils/assets';
 import { CheckCircle2, Globe, Award, BookOpen, Compass, ArrowRight, ShieldCheck, HelpCircle } from 'lucide-react';
 
 interface LanguagesProps {
@@ -133,7 +134,7 @@ export const Languages: React.FC<LanguagesProps> = ({ onNavigate, onOpenRegister
 
             <div className="lg:col-span-5 rounded-[28px] overflow-hidden min-h-[340px] sm:min-h-[420px] shadow-sm relative">
               <img
-                src="/assets/aistudio/Screenshot_2026-10-26-22-11-59-699_com.instagram.android-edit_5e2b32ea.jpg"
+                src={getAssetUrl('/assets/aistudio/Screenshot_2026-10-26-22-11-59-699_com.instagram.android-edit_5e2b32ea.jpg')}
                 alt="Deutsch Haus Nemis tili o'quv markazi"
                 className="w-full h-full object-cover"
               />
@@ -151,7 +152,7 @@ export const Languages: React.FC<LanguagesProps> = ({ onNavigate, onOpenRegister
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
             <div className="lg:col-span-5 order-2 lg:order-1 rounded-[28px] overflow-hidden min-h-[340px] sm:min-h-[420px] shadow-sm relative">
               <img
-                src="/assets/aistudio/Screenshot_2026-10-26-22-13-42-017_com.instagram.android-edit_52c4bdf6.jpg"
+                src={getAssetUrl('/assets/aistudio/Screenshot_2026-10-26-22-13-42-017_com.instagram.android-edit_52c4bdf6.jpg')}
                 alt="Ingliz tili va IELTS"
                 className="w-full h-full object-cover"
               />

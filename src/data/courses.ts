@@ -1,4 +1,5 @@
 import { Course } from '../types';
+import { getAssetUrl } from '../utils/assets';
 
 export const coursesData: Course[] = [
   // ==========================================
@@ -77,7 +78,7 @@ export const coursesData: Course[] = [
         'Stage-end qualification test'
       ]
     },
-    image: '/assets/aistudio/Screenshot_2026-10-26-22-11-59-699_com.instagram.android-edit_5e2b32ea.jpg'
+    image: getAssetUrl('/assets/aistudio/Screenshot_2026-10-26-22-11-59-699_com.instagram.android-edit_5e2b32ea.jpg')
   },
   {
     id: 'nemistili-2-bosqich',
@@ -152,7 +153,7 @@ export const coursesData: Course[] = [
         'Qualifying test to join the final B1 cohort'
       ]
     },
-    image: '/assets/aistudio/Screenshot_2026-10-26-22-13-42-017_com.instagram.android-edit_52c4bdf6.jpg'
+    image: getAssetUrl('/assets/aistudio/Screenshot_2026-10-26-22-13-42-017_com.instagram.android-edit_52c4bdf6.jpg')
   },
   {
     id: 'nemistili-3-bosqich',
@@ -227,7 +228,7 @@ export const coursesData: Course[] = [
         'Roadmap for German vocational Ausbildung & visa'
       ]
     },
-    image: '/assets/aistudio/Screenshot_2026-10-26-22-14-39-647_com.instagram.android-edit_654ff189.jpg'
+    image: getAssetUrl('/assets/aistudio/Screenshot_2026-10-26-22-14-39-647_com.instagram.android-edit_654ff189.jpg')
   },
 
   // ==========================================
@@ -295,7 +296,7 @@ export const coursesData: Course[] = [
         'Coupled with daily speaking drills'
       ]
     },
-    image: '/assets/aistudio/Screenshot_2026-10-26-22-12-51-449_com.instagram.android-edit_c1d9a452.jpg'
+    image: getAssetUrl('/assets/aistudio/Screenshot_2026-10-26-22-12-51-449_com.instagram.android-edit_c1d9a452.jpg')
   },
   {
     id: 'english-pre-ielts',
@@ -359,7 +360,7 @@ export const coursesData: Course[] = [
         'Progress monitoring via regular assessments'
       ]
     },
-    image: '/assets/aistudio/75e33532d639d06919266594a876eade_676c59d2.jpg'
+    image: getAssetUrl('/assets/aistudio/75e33532d639d06919266594a876eade_676c59d2.jpg')
   },
   {
     id: 'english-ielts',
@@ -423,6 +424,6 @@ export const coursesData: Course[] = [
         'Personalized feedback on Writing and Speaking'
       ]
     },
-    image: '/assets/aistudio/Screenshot_2026-10-26-22-14-49-628_com.instagram.android-edit_79e2ed85.jpg'
+    image: getAssetUrl('/assets/aistudio/Screenshot_2026-10-26-22-14-49-628_com.instagram.android-edit_79e2ed85.jpg')
   }
 ];

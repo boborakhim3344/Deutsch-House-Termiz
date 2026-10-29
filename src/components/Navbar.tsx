@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { Language } from '../types';
+import { getAssetUrl } from '../utils/assets';
 import { Globe, ChevronDown, Menu, X, Phone } from 'lucide-react';
 
 interface NavbarProps {
@@ -61,7 +62,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate, onOpenR
           className="flex items-center gap-2.5 group cursor-pointer text-left focus:outline-none"
         >
           <img
-            src="/assets/aistudio/deutsch_house_logo_transparent_96df49ae.png"
+            src={getAssetUrl('/assets/aistudio/deutsch_house_logo_transparent_96df49ae.png')}
             alt="Deutsch House Logo"
             className="w-8 h-8 sm:w-9 sm:h-9 object-contain transition-transform group-hover:scale-105"
           />

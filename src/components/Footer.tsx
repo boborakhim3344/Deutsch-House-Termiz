@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
+import { getAssetUrl } from '../utils/assets';
 import { Send, CheckCircle2, Phone, MapPin, ExternalLink } from 'lucide-react';
 
 interface FooterProps {
@@ -84,7 +85,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenPrivacy, onOpe
               className="flex items-center gap-3 mb-4 text-left group cursor-pointer focus:outline-none"
             >
               <img
-                src="/assets/aistudio/deutsch_house_logo_transparent_96df49ae.png"
+                src={getAssetUrl('/assets/aistudio/deutsch_house_logo_transparent_96df49ae.png')}
                 alt="Deutsch House Logo"
                 className="w-10 h-10 object-contain transition-transform group-hover:scale-105"
               />

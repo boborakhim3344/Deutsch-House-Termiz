@@ -7,6 +7,7 @@ import { faqData } from '../data/faq';
 import { discountsData } from '../data/discounts';
 import { habibulloGermanyPhotos } from '../data/teachers';
 import { Course, BlogPost } from '../types';
+import { getAssetUrl } from '../utils/assets';
 import {
   Sparkles,
   CheckCircle,
@@ -60,31 +61,31 @@ export const Home: React.FC<HomeProps> = ({
       num: '01',
       title: t.formats.f1,
       desc: t.formats.f1Desc,
-      image: '/assets/aistudio/Screenshot_2026-10-26-22-11-38-598_com.instagram.android-edit_159193ae.jpg'
+      image: getAssetUrl('/assets/aistudio/Screenshot_2026-10-26-22-11-38-598_com.instagram.android-edit_159193ae.jpg')
     },
     {
       num: '02',
       title: t.formats.f2,
       desc: t.formats.f2Desc,
-      image: '/assets/aistudio/8b52a9a87f58b6cdd8c3081897732d9a_0fed3107.jpg'
+      image: getAssetUrl('/assets/aistudio/8b52a9a87f58b6cdd8c3081897732d9a_0fed3107.jpg')
     },
     {
       num: '03',
       title: t.formats.f3,
       desc: t.formats.f3Desc,
-      image: '/assets/aistudio/Screenshot_2026-10-26-22-11-59-699_com.instagram.android-edit_5e2b32ea.jpg'
+      image: getAssetUrl('/assets/aistudio/Screenshot_2026-10-26-22-11-59-699_com.instagram.android-edit_5e2b32ea.jpg')
     },
     {
       num: '04',
       title: t.formats.f4,
       desc: t.formats.f4Desc,
-      image: '/assets/aistudio/Screenshot_2026-10-26-22-13-42-017_com.instagram.android-edit_52c4bdf6.jpg'
+      image: getAssetUrl('/assets/aistudio/Screenshot_2026-10-26-22-13-42-017_com.instagram.android-edit_52c4bdf6.jpg')
     },
     {
       num: '05',
       title: t.formats.f5,
       desc: t.formats.f5Desc,
-      image: '/assets/aistudio/75e33532d639d06919266594a876eade_676c59d2.jpg'
+      image: getAssetUrl('/assets/aistudio/75e33532d639d06919266594a876eade_676c59d2.jpg')
     }
   ];
 
@@ -97,7 +98,7 @@ export const Home: React.FC<HomeProps> = ({
         {/* Full-width classroom background photo with authentic wall sign */}
         <div className="absolute inset-0 z-0">
           <img
-            src="/assets/aistudio/Screenshot_2026-10-26-22-11-38-598_com.instagram.android-edit_159193ae.jpg"
+            src={getAssetUrl('/assets/aistudio/Screenshot_2026-10-26-22-11-38-598_com.instagram.android-edit_159193ae.jpg')}
             alt="Deutsch House Classroom Interior"
             className="w-full h-full object-cover object-center scale-105 animate-in fade-in zoom-in-105 duration-1000"
           />
@@ -877,7 +878,7 @@ export const Home: React.FC<HomeProps> = ({
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
             <div className="lg:col-span-5 rounded-[28px] overflow-hidden min-h-[300px] shadow-sm relative group">
               <img
-                src="/assets/aistudio/Screenshot_2026-10-26-22-12-51-449_com.instagram.android-edit_c1d9a452.jpg"
+                src={getAssetUrl('/assets/aistudio/Screenshot_2026-10-26-22-12-51-449_com.instagram.android-edit_c1d9a452.jpg')}
                 alt="Deutsch House Table and Materials"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
@@ -1099,7 +1100,7 @@ export const Home: React.FC<HomeProps> = ({
 
             <div className="lg:col-span-6 rounded-[24px] overflow-hidden border border-stone-200 relative group shadow-sm bg-stone-100">
               <img
-                src="/assets/aistudio/Screenshot_2026-10-28-13-14-16-239_com.google.android.apps.maps-edit_9726e14d.jpg"
+                src={getAssetUrl('/assets/aistudio/Screenshot_2026-10-28-13-14-16-239_com.google.android.apps.maps-edit_9726e14d.jpg')}
                 alt="Deutsch House Termiz joylashuv xaritasi (Surxon arena va Hotel Afruz yonida)"
                 className="w-full h-[280px] sm:h-[340px] object-cover object-center group-hover:scale-105 transition-transform duration-500"
               />
@@ -1124,7 +1125,7 @@ export const Home: React.FC<HomeProps> = ({
         <div className="max-w-6xl mx-auto rounded-[36px] overflow-hidden relative min-h-[380px] sm:min-h-[440px] flex items-center justify-center p-8 sm:p-14 text-center shadow-xl">
           <div className="absolute inset-0 z-0">
             <img
-              src="/assets/aistudio/Screenshot_2026-10-26-22-12-51-449_com.instagram.android-edit_c1d9a452.jpg"
+              src={getAssetUrl('/assets/aistudio/Screenshot_2026-10-26-22-12-51-449_com.instagram.android-edit_c1d9a452.jpg')}
               alt="Deutsch House Call to Action"
               className="w-full h-full object-cover scale-105"
             />

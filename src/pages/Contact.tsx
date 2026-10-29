@@ -3,6 +3,7 @@ import { useLanguage } from '../context/LanguageContext';
 import { coursesData } from '../data/courses';
 import { validateRegistrationForm } from '../utils/courseFilter';
 import { getTelegramAdminUrl, openTelegramChat, buildTelegramMessage } from '../utils/telegram';
+import { getAssetUrl } from '../utils/assets';
 import {
   Phone,
   Send,
@@ -520,7 +521,7 @@ export const Contact: React.FC = () => {
           </div>
           <div className="rounded-[24px] overflow-hidden w-full border border-stone-200 relative group shadow-sm bg-stone-100">
             <img
-              src="/assets/aistudio/Screenshot_2026-10-28-13-14-16-239_com.google.android.apps.maps-edit_9726e14d.jpg"
+              src={getAssetUrl('/assets/aistudio/Screenshot_2026-10-28-13-14-16-239_com.google.android.apps.maps-edit_9726e14d.jpg')}
               alt="Deutsch House Termiz joylashuv xaritasi (Surxon arena va Hotel Afruz yonida)"
               className="w-full h-[360px] sm:h-[460px] object-cover object-center group-hover:scale-105 transition-transform duration-500"
             />

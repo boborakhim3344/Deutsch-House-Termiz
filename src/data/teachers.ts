@@ -1,8 +1,9 @@
 import { Teacher } from '../types';
+import { getAssetUrl } from '../utils/assets';
 
 export const habibulloGermanyPhotos = [
   {
-    url: '/assets/aistudio/IMG_20261027_212853_487_d5f5a8d2.jpg',
+    url: getAssetUrl('/assets/aistudio/IMG_20261027_212853_487_d5f5a8d2.jpg'),
     location: {
       uz: 'Berlin, Brandenburger Tor',
       ru: 'Берлин, Бранденбургские ворота',
@@ -15,7 +16,7 @@ export const habibulloGermanyPhotos = [
     }
   },
   {
-    url: '/assets/aistudio/IMG_20261027_212839_170_e043026d.jpg',
+    url: getAssetUrl('/assets/aistudio/IMG_20261027_212839_170_e043026d.jpg'),
     location: {
       uz: 'Hamburg, Elbphilharmonie & Elbe sohili',
       ru: 'Гамбург, Эльбская филармония и набережная',
@@ -28,7 +29,7 @@ export const habibulloGermanyPhotos = [
     }
   },
   {
-    url: '/assets/aistudio/IMG_20261027_212848_401_fc90e022.jpg',
+    url: getAssetUrl('/assets/aistudio/IMG_20261027_212848_401_fc90e022.jpg'),
     location: {
       uz: 'Berlin, Neptunbrunnen',
       ru: 'Берлин, фонтан Нептун',
@@ -41,7 +42,7 @@ export const habibulloGermanyPhotos = [
     }
   },
   {
-    url: '/assets/aistudio/IMG_20261027_212841_678_16ffbc6b.jpg',
+    url: getAssetUrl('/assets/aistudio/IMG_20261027_212841_678_16ffbc6b.jpg'),
     location: {
       uz: 'Hamburg, Cap San Diego kema-muzeyi',
       ru: 'Гамбург, музей-корабль Cap San Diego',
@@ -54,7 +55,7 @@ export const habibulloGermanyPhotos = [
     }
   },
   {
-    url: '/assets/aistudio/IMG_20261027_212845_029_65393116.jpg',
+    url: getAssetUrl('/assets/aistudio/IMG_20261027_212845_029_65393116.jpg'),
     location: {
       uz: 'Hamburg, Port va Blohm+Voss doki',
       ru: 'Гамбург, порт и доки Blohm+Voss',

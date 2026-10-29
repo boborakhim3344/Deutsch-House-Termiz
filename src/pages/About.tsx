@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { teachersData, habibulloGermanyPhotos } from '../data/teachers';
+import { getAssetUrl } from '../utils/assets';
 import { Award, Heart, Globe2, MapPin, Phone, ExternalLink } from 'lucide-react';
 
 interface AboutProps {
@@ -50,7 +51,7 @@ export const About: React.FC<AboutProps> = ({ onOpenRegister }) => {
 
           <div className="lg:col-span-5 rounded-[32px] overflow-hidden min-h-[360px] shadow-sm relative group">
             <img
-              src="/assets/aistudio/Screenshot_2026-10-26-22-11-38-598_com.instagram.android-edit_159193ae.jpg"
+              src={getAssetUrl('/assets/aistudio/Screenshot_2026-10-26-22-11-38-598_com.instagram.android-edit_159193ae.jpg')}
               alt="Deutsch House Markazi Termiz"
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
@@ -223,7 +224,7 @@ export const About: React.FC<AboutProps> = ({ onOpenRegister }) => {
 
             <div className="lg:col-span-7 rounded-[28px] overflow-hidden min-h-[300px] shadow-sm relative">
               <img
-                src="/assets/aistudio/Screenshot_2026-10-26-22-14-49-628_com.instagram.android-edit_79e2ed85.jpg"
+                src={getAssetUrl('/assets/aistudio/Screenshot_2026-10-26-22-14-49-628_com.instagram.android-edit_79e2ed85.jpg')}
                 alt="Deutsch House Sertifikatlar va Diplomlar"
                 className="w-full h-full object-cover"
               />
