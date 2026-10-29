@@ -14,8 +14,8 @@ export default defineConfig(({ command }) => {
   const base = process.env.VITE_BASE_PATH ?? (command === 'serve' ? '/' : '/Deutsch-House-Termiz/');
 
   return {
-    base,
-    plugins: [react(), tailwindcss()],
+  base: '/Deutsch-House-Termiz/',
+  plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
         '@': path.resolve(__dirname, '.'),
