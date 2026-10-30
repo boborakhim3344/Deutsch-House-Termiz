@@ -2,15 +2,16 @@ import React, { useState, useEffect } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { Language } from '../types';
 import { getAssetUrl } from '../utils/assets';
-import { Globe, ChevronDown, Menu, X, Phone } from 'lucide-react';
+import { Globe, ChevronDown, Menu, X, Phone, Share2 } from 'lucide-react';
 
 interface NavbarProps {
   currentPage: string;
   onNavigate: (page: string) => void;
   onOpenRegister: () => void;
+  onOpenShare?: () => void;
 }
 
-export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate, onOpenRegister }) => {
+export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate, onOpenRegister, onOpenShare }) => {
   const { language, setLanguage, t } = useLanguage();
   const [langMenuOpen, setLangMenuOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -96,8 +97,20 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate, onOpenR
           })}
         </div>
 
-        {/* Right Section: Language switcher & CTA */}
-        <div className="flex items-center gap-2 sm:gap-3">
+        {/* Right Section: Share, Language switcher & CTA */}
+        <div className="flex items-center gap-1.5 sm:gap-2.5">
+          {/* Share Button */}
+          {onOpenShare && (
+            <button
+              onClick={onOpenShare}
+              className="flex items-center justify-center w-8 h-8 rounded-full bg-amber-500/10 hover:bg-amber-500/20 text-amber-700 transition-colors cursor-pointer"
+              title="Do‘stlarga ulashish"
+              aria-label="Do‘stlarga ulashish"
+            >
+              <Share2 className="w-3.5 h-3.5" />
+            </button>
+          )}
+
           {/* Quick Call icon for easy contact */}
           <a
             href="tel:+998774261997"
@@ -196,7 +209,19 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate, onOpenR
               </button>
             ))}
 
-            <div className="pt-3 mt-2 border-t border-stone-200">
+            <div className="pt-3 mt-2 border-t border-stone-200 flex flex-col gap-2">
+              {onOpenShare && (
+                <button
+                  onClick={() => {
+                    setMobileMenuOpen(false);
+                    onOpenShare();
+                  }}
+                  className="w-full flex items-center justify-center gap-2 py-3 rounded-full bg-stone-100 hover:bg-stone-200 text-zinc-800 font-semibold text-sm transition-colors cursor-pointer"
+                >
+                  <Share2 className="w-4 h-4 text-amber-600" />
+                  <span>Do‘stlarga ulashish</span>
+                </button>
+              )}
               <button
                 onClick={() => {
                   setMobileMenuOpen(false);

@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { getAssetUrl } from '../utils/assets';
-import { Send, CheckCircle2, Phone, MapPin, ExternalLink } from 'lucide-react';
+import { Send, CheckCircle2, Phone, MapPin, ExternalLink, Share2 } from 'lucide-react';
 
 interface FooterProps {
   onNavigate: (page: string) => void;
   onOpenPrivacy: () => void;
   onOpenTerms: () => void;
+  onOpenShare?: () => void;
 }
 
-export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenPrivacy, onOpenTerms }) => {
+export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenPrivacy, onOpenTerms, onOpenShare }) => {
   const { t } = useLanguage();
   const [email, setEmail] = useState('');
   const [subscribed, setSubscribed] = useState(false);
@@ -96,7 +97,17 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenPrivacy, onOpe
             <p className="text-stone-400 text-sm leading-relaxed mb-6 max-w-sm">
               {t.footer.aboutText}
             </p>
-            <div className="flex items-center gap-3">
+            <div className="flex flex-wrap items-center gap-2.5">
+              {onOpenShare && (
+                <button
+                  onClick={onOpenShare}
+                  className="px-3.5 py-1.5 rounded-full bg-amber-500 hover:bg-amber-400 text-zinc-950 flex items-center gap-2 transition-colors text-xs font-semibold cursor-pointer shadow-sm"
+                  aria-label="Do‘stlarga ulashish"
+                >
+                  <Share2 className="w-3.5 h-3.5" />
+                  <span>Ulashish</span>
+                </button>
+              )}
               <a
                 href="https://t.me/deutschhaus_admin"
                 target="_blank"

@@ -11,6 +11,7 @@ import { QuickContactFloating } from './components/QuickContactFloating';
 import { RegistrationModal } from './components/RegistrationModal';
 import { CourseDetailModal } from './components/CourseDetailModal';
 import { LegalModal } from './components/LegalModal';
+import { ShareModal } from './components/ShareModal';
 import { Home } from './pages/Home';
 import { Courses } from './pages/Courses';
 import { Languages } from './pages/Languages';
@@ -24,6 +25,7 @@ export function AppContent() {
   const [selectedCourse, setSelectedCourse] = useState<Course | null>(null);
   const [selectedPost, setSelectedPost] = useState<BlogPost | null>(null);
   const [isRegisterOpen, setIsRegisterOpen] = useState(false);
+  const [isShareOpen, setIsShareOpen] = useState(false);
   const [registerDefaults, setRegisterDefaults] = useState<{
     language: 'german' | 'english';
     format: 'offline' | 'online';
@@ -69,6 +71,7 @@ export function AppContent() {
         currentPage={currentPage}
         onNavigate={handleNavigate}
         onOpenRegister={() => handleOpenRegister()}
+        onOpenShare={() => setIsShareOpen(true)}
       />
 
       {/* Main Page Content */}
@@ -116,10 +119,17 @@ export function AppContent() {
         onNavigate={handleNavigate}
         onOpenPrivacy={() => setLegalModalType('privacy')}
         onOpenTerms={() => setLegalModalType('terms')}
+        onOpenShare={() => setIsShareOpen(true)}
       />
 
       {/* Floating Telegram and Phone quick contact button */}
-      <QuickContactFloating />
+      <QuickContactFloating onOpenShare={() => setIsShareOpen(true)} />
+
+      {/* Share Modal */}
+      <ShareModal
+        isOpen={isShareOpen}
+        onClose={() => setIsShareOpen(false)}
+      />
 
       {/* Registration Modal */}
       <RegistrationModal

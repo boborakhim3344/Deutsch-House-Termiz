@@ -1,13 +1,29 @@
 import React, { useState } from 'react';
-import { Send, Phone, MessageSquare, X } from 'lucide-react';
+import { Send, Phone, MessageSquare, X, Share2 } from 'lucide-react';
 
-export const QuickContactFloating: React.FC = () => {
+interface QuickContactFloatingProps {
+  onOpenShare?: () => void;
+}
+
+export const QuickContactFloating: React.FC<QuickContactFloatingProps> = ({ onOpenShare }) => {
   const [open, setOpen] = useState(false);
 
   return (
     <div className="fixed bottom-6 right-6 z-40 flex flex-col items-end">
       {open && (
         <div className="mb-3 flex flex-col gap-2.5 items-end animate-in fade-in slide-in-from-bottom-3 duration-200">
+          {onOpenShare && (
+            <button
+              onClick={() => {
+                setOpen(false);
+                onOpenShare();
+              }}
+              className="flex items-center gap-2.5 px-4 py-2.5 rounded-full bg-amber-500 hover:bg-amber-600 text-zinc-950 shadow-lg text-xs font-bold transition-all cursor-pointer group"
+            >
+              <span>Do‘stlarga ulashish</span>
+              <Share2 className="w-3.5 h-3.5" />
+            </button>
+          )}
           <a
             href="https://t.me/deutschhaus_admin"
             target="_blank"
